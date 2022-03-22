@@ -31,10 +31,6 @@ class Player extends Plane{
           callback.call(this);
       };
       const keys = {
-          /* 'w': this.up,
-          'a': this.left,
-          's': this.down,
-          'd': this.right, */
           'ArrowUp': this.up,
           'ArrowLeft': this.left,
           'ArrowDown': this.down,

@@ -9,8 +9,6 @@ class Star extends Element{
       this.speed = -this.w * 0.05;
       this.x = w + this.w;
       this.y = random(0, h - this.h);
-      // this.rotateState = true;
-      // this.rotateSpeed = -0.4;
   }
 
   move() {
