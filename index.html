@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/icons-font.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Star Wars</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <div id="header" class="header">
+      <div id="logo" class="logo">
+        <img src="./img/logo-01.png" alt="background-stars">
+      </div>
+    </div>
+
+    <div id="app" class="app">
+      <div id="start" class="start">
+        <div class="start__content">
+          <ul class="start__list">
+            <li class="start__list-item">Use <i class="icon-arrow icon-arrow-down-solid"></i> <i
+                class="icon-arrow icon-arrow-up-solid"></i> <i class="icon-arrow icon-arrow-left-solid"></i> <i
+                class="icon-arrow icon-arrow-right-solid"></i> to drive the ship</li>
+            <li class="start__list-item">Press &laquo; P &raquo; to pause the game and &laquo; M &raquo; to mute the
+              game.</li>
+            <li class="start__list-item">Press &laquo; Space Key &raquo; to hit the enemy</li>
+            <li class="start__list-item">The initial value of fuel is 100, which decreases by 1 every second. When the
+              fuel value is 0, the game ends.</li>
+            <li class="start__list-item">Touch the fallen bottle of fuel to add 15 points. Maximum amount of fuel is 100
+              points.</li>
+            <li class="start__list-item">Hit an enemy ship to increase by 5 points. Planets must be hit twice, 10 points
+              are added.</li>
+            <li class="start__list-item">For hitting an associate, 10 points are reduced.</li>
+            <li class="start__list-item">The game allows negative scores.</li>
+          </ul>
+        </div>
+        <button id="start-btn" class="btn">Start Game</button>
+      </div>
+      <div id="play" class="play">
+        <div class="play__header">
+          <ul class="play__info">
+            <li class="play__info-item play__info-item-data">
+              <img src="./img/time3.png" alt="time">
+              <span id="time">00</span>
+            </li>
+            <li class="play__info-item  play__info-item-data">
+              <img src="./img/fuel2.png" alt="fuel">
+              <span id="fuel">00</span>
+            </li>
+            <li class="play__info-item  play__info-item-data">
+              <img src="./img/score.png" alt="score">
+              <span id="score">00</span>
+            </li>
+            <li class="play__info-item  play__info-item-data">
+              <img src="./img/playerBullet.png" alt="score">
+              <span id="shoot">00</span>
+            </li>
+          </ul>
+          <ul class="play__info">
+            <li id="game-font-size-add" class="play__info-item">
+              <img class="pause" src="./img/a+.png" alt="time">
+            </li>
+            <li id="game-font-size-reduce" class="play__info-item">
+              <img class="pause" src="./img/a-.png" alt="time">
+            </li>
+            <li id="game-mute-btn" class="play__info-item">
+              <img class="pause" src="./img/mute.png" alt="time">
+              <img class="pause hide" src="./img/speaker.png" alt="time">
+            </li>
+            <li id="game-pause-btn" class="play__info-item">
+              <img class="pause hide" src="./img/play.png" alt="time">
+              <img class="pause" src="./img/pause.png" alt="time">
+            </li>
+          </ul>
+        </div>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="over" class="column absolute">
+       <!--  <div class="game-data">
+          <p class="message">
+            <span>
+              <img src="./img/time3.png" alt="time">
+            </span>
+            <span>
+              --
+            </span>
+            <span class="time">00</span>
+          </p>
+          <p class="message">
+            <span>
+              <img src="./img/score.png" alt="score">
+            </span>
+            <span>
+              --
+            </span>
+            <span class="score">00</span>
+          </p>
+          <p class="message">
+            <span>
+              <img src="./img/playerBullet.png" alt="score">
+            </span>
+            <span>
+              --
+            </span>
+            <span class="shoot">00</span>
+          </p>
+        </div>
+        <input type="text" id="name" placeholder="Пожалуйста, введите Ваше имя" />
+        <button id="submit-btn" class="btn" disabled>
+          Продолжить игру
+        </button> -->
+      </div>
+      <div id="rank" class="column absolute">
+        <!-- <table class="scroll">
+          <thead>
+            <tr>
+              <th>ранжирование</th>
+              <th>Имя</th>
+              <th>Доля</th>
+              <th>Секунды</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+        <button id="restart-btn" class="btn">
+          back to start
+        </button> -->
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Crafted by
+        <a href="https://github.com/MarinaNovas">GitHub</a>
+      </span>
+    </footer>
+
+  </div>
+
+  <script src="./js/config/config.js"></script>
+  <script src="./js/utils/utils.js"></script>
+  <script src="./js/utils/res.js"></script>
+  <script src="./js/class/scene.js"></script>
+  <script src="./js/class/cooldown.js"></script>
+  <script src="./js/class/element.js"></script>
+  <script src="./js/class/animation.js"></script>
+  <script src="./js/class/plane.js"></script>
+  <script src="./js/class/bullet.js"></script>
+  <script src="./js/class/player.js"></script>
+  <script src="./js/class/enemy.js"></script>
+  <script src="./js/class/meteorite.js"></script>
+  <script src="js/class/friend.js"></script>
+  <script src="js/class/star.js"></script>
+  <script src="js/class/fuel.js"></script>
+  <script src="./js/class/scenes/start.js"></script>
+  <script src="./js/class/scenes/play.js"></script>
+  <script src="./js/class/scenes/over.js"></script>
+  <script src="./js/class/scenes/rank.js"></script>
+  <script src="./js/class/game.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
